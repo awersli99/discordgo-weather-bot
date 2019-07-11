@@ -21,4 +21,11 @@ go build main.go
 ```bash
 ./{executable name} -t {bot token} -k {api.apixu.com api key}
 ```
+
+## Bot usage
+
+```bash
+?weather {location name}
+```
+
 If no locations are being found even though they are correct, the API key is most likely incorrect.
