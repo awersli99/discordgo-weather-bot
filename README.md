@@ -28,4 +28,4 @@ go build main.go
 ?weather {location name}
 ```
 
-If no locations are being found even though they are correct, the API key is most likely incorrect.
+If no locations are being found even though the names are correct, the API key is most likely incorrect.
