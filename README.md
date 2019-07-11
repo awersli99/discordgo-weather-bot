@@ -19,6 +19,6 @@ go build main.go
 ## Usage
 
 ```bash
-./{executable name} -t {bot token}
+./{executable name} -t {bot token} -k {api.apixu.com api key}
 ```
-
+If no locations are being found even though they are correct, the API key is most likely incorrect.
