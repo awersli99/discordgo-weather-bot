@@ -16,6 +16,7 @@ import (
 
 var (
 	token string
+	apiKey string
 )
 
 type locationOF struct {
@@ -41,12 +42,17 @@ type weather struct {
 func init() {
 
 	flag.StringVar(&token, "t", "", "Bot Token")
+	flag.StringVar(&apiKey, "k", "", "api.apixu.com API Key")
 	flag.Parse()
+	
+	if token == "" || token == "" {
+		flag.Usage()
+		os.Exit(1)
+	}
 }
 
 func getWeather(location string) (weather, locationOF, string) {
-	url := "http://api.apixu.com/v1/current.json?key=43c0be7ca1624d31b23124340190907&q=" + location
-	fmt.Println(url)
+	url := "http://api.apixu.com/v1/current.json?key=" + apiKey + "&q=" + location
 	req, _ := http.NewRequest("GET", url, nil)
 	res, _ := http.DefaultClient.Do(req)
 	body, _ := ioutil.ReadAll(res.Body)
