@@ -165,7 +165,6 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			},
 		}
 		s.ChannelMessageSendEmbed(m.ChannelID, embed)
-		// http://api.apixu.com/v1/current.json?key=43c0be7ca1624d31b23124340190907&q=CITYNAME
 	}
 }
 
